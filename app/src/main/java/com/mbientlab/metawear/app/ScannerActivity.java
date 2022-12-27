@@ -7,18 +7,17 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.Build;
-import android.os.IBinder;
-//import android.support.v7.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.os.IBinder;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.github.mikephil.charting.utils.Utils;
 import com.mbientlab.bletoolbox.scanner.BleScannerFragment;
-import com.mbientlab.bletoolbox.scanner.BleScannerFragment.*;
+import com.mbientlab.bletoolbox.scanner.BleScannerFragment.ScannerCommunicationBus;
 import com.mbientlab.metawear.MetaWearBoard;
 import com.mbientlab.metawear.android.BtleService;
 import com.mbientlab.metawear.module.Settings;
-
-import com.github.mikephil.charting.utils.Utils;
 
 import java.util.UUID;
 

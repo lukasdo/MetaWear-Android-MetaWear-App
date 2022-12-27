@@ -39,17 +39,16 @@ import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.IBinder;
-//import androidx.core.app.Fragment;
-import androidx.fragment.app.Fragment;
-//import android.support.v7.app.AlertDialog;
-import androidx.appcompat.app.AlertDialog;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
-import com.mbientlab.metawear.android.BtleService;
+import androidx.appcompat.app.AlertDialog;
+import androidx.fragment.app.Fragment;
+
 import com.mbientlab.metawear.MetaWearBoard;
 import com.mbientlab.metawear.UnsupportedModuleException;
+import com.mbientlab.metawear.android.BtleService;
 import com.mbientlab.metawear.app.help.HelpOptionAdapter;
 
 import java.util.Locale;

@@ -24,6 +24,8 @@
 
 package com.mbientlab.metawear.app;
 
+import static com.mbientlab.metawear.app.ScannerActivity.setConnInterval;
+
 import android.Manifest;
 import android.annotation.TargetApi;
 import android.app.Dialog;
@@ -41,44 +43,28 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
 import android.provider.MediaStore;
-//import android.support.annotation.NonNull;
-import androidx.annotation.NonNull;
-//import android.support.design.widget.FloatingActionButton;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-//import android.support.design.widget.Snackbar;
-import com.google.android.material.snackbar.Snackbar;
-//import androidx.core.app.DialogFragment;
-import androidx.fragment.app.DialogFragment;
-//import androidx.core.app.Fragment;
-import androidx.fragment.app.Fragment;
-//import androidx.core.app.FragmentManager;
-import androidx.fragment.app.FragmentManager;
-//import androidx.core.app.FragmentTransaction;
-import androidx.fragment.app.FragmentTransaction;
-//import androidx.core.app.LoaderManager;
-import androidx.loader.app.LoaderManager;
-//import androidx.core.content.CursorLoader;
-import androidx.loader.content.CursorLoader;
-//import androidx.core.content.Loader;
-import androidx.loader.content.Loader;
-//import android.support.v7.app.ActionBar;
-import androidx.appcompat.app.ActionBar;
-//import android.support.design.widget.NavigationView;
-import com.google.android.material.navigation.NavigationView;
-//import androidx.core.widget.DrawerLayout;
-import androidx.drawerlayout.widget.DrawerLayout;
-//import android.support.v7.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.ActionBarDrawerToggle;
-//import android.support.v7.app.AlertDialog;
-import androidx.appcompat.app.AlertDialog;
-//import android.support.v7.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatActivity;
-//import android.support.v7.widget.Toolbar;
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.view.GravityCompat;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.loader.app.LoaderManager;
+import androidx.loader.content.CursorLoader;
+import androidx.loader.content.Loader;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.snackbar.Snackbar;
 import com.mbientlab.metawear.MetaWearBoard;
 import com.mbientlab.metawear.android.BtleService;
 import com.mbientlab.metawear.app.ModuleFragmentBase.FragmentBus;
@@ -100,8 +86,6 @@ import no.nordicsemi.android.dfu.DfuProgressListener;
 import no.nordicsemi.android.dfu.DfuProgressListenerAdapter;
 import no.nordicsemi.android.dfu.DfuServiceInitiator;
 import no.nordicsemi.android.dfu.DfuServiceListenerHelper;
-
-import static com.mbientlab.metawear.app.ScannerActivity.setConnInterval;
 
 public class NavigationActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, ServiceConnection, FragmentBus, LoaderManager.LoaderCallbacks<Cursor> {
     public final static String EXTRA_BT_DEVICE= "com.mbientlab.metawear.app.NavigationActivity.EXTRA_BT_DEVICE";

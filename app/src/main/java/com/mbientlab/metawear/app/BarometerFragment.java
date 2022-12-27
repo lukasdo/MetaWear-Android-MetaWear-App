@@ -41,12 +41,12 @@ import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
-
 import com.mbientlab.metawear.Route;
 import com.mbientlab.metawear.UnsupportedModuleException;
 import com.mbientlab.metawear.app.help.HelpOptionAdapter;
 import com.mbientlab.metawear.module.BarometerBosch;
-import com.mbientlab.metawear.module.BarometerBosch.*;
+import com.mbientlab.metawear.module.BarometerBosch.FilterCoeff;
+import com.mbientlab.metawear.module.BarometerBosch.OversamplingMode;
 
 import java.io.FileOutputStream;
 import java.util.ArrayList;

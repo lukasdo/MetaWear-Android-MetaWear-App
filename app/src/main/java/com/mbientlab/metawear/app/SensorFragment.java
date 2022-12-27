@@ -32,13 +32,9 @@
 package com.mbientlab.metawear.app;
 
 import android.content.Intent;
-import android.graphics.DashPathEffect;
-import android.graphics.Typeface;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
-import androidx.core.content.FileProvider;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,15 +42,15 @@ import android.view.ViewTreeObserver;
 import android.widget.Button;
 import android.widget.Switch;
 
+import androidx.core.content.FileProvider;
+
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.YAxis;
-
 import com.mbientlab.metawear.Route;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.List;
 
 /**
  * Created by etsai on 8/19/2015.

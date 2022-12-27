@@ -32,8 +32,6 @@
 package com.mbientlab.metawear.app;
 
 import android.os.Bundle;
-//import android.support.design.widget.TextInputLayout;
-import com.google.android.material.textfield.TextInputLayout;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
@@ -48,6 +46,7 @@ import android.widget.Spinner;
 import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
+import com.google.android.material.textfield.TextInputLayout;
 import com.mbientlab.metawear.Subscriber;
 import com.mbientlab.metawear.UnsupportedModuleException;
 import com.mbientlab.metawear.app.help.HelpOption;

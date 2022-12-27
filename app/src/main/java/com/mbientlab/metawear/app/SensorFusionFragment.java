@@ -45,14 +45,15 @@ import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
-
 import com.mbientlab.metawear.UnsupportedModuleException;
 import com.mbientlab.metawear.app.help.HelpOption;
 import com.mbientlab.metawear.app.help.HelpOptionAdapter;
 import com.mbientlab.metawear.data.EulerAngles;
 import com.mbientlab.metawear.data.Quaternion;
 import com.mbientlab.metawear.module.SensorFusionBosch;
-import com.mbientlab.metawear.module.SensorFusionBosch.*;
+import com.mbientlab.metawear.module.SensorFusionBosch.AccRange;
+import com.mbientlab.metawear.module.SensorFusionBosch.GyroRange;
+import com.mbientlab.metawear.module.SensorFusionBosch.Mode;
 
 import java.io.FileOutputStream;
 import java.util.ArrayList;

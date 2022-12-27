@@ -39,15 +39,14 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.github.mikephil.charting.components.YAxis;
-
 import com.mbientlab.metawear.AsyncDataProducer;
 import com.mbientlab.metawear.UnsupportedModuleException;
 import com.mbientlab.metawear.app.help.HelpOption;
 import com.mbientlab.metawear.app.help.HelpOptionAdapter;
 import com.mbientlab.metawear.data.AngularVelocity;
 import com.mbientlab.metawear.module.Gyro;
-import com.mbientlab.metawear.module.Gyro.Range;
 import com.mbientlab.metawear.module.Gyro.OutputDataRate;
+import com.mbientlab.metawear.module.Gyro.Range;
 //import com.mbientlab.metawear.module.GyroBmi160;
 //import com.mbientlab.metawear.module.GyroBmi270;
 

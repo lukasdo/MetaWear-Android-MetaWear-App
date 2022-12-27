@@ -45,13 +45,13 @@ import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
-
 import com.mbientlab.metawear.ForcedDataProducer;
 import com.mbientlab.metawear.UnsupportedModuleException;
 import com.mbientlab.metawear.app.help.HelpOption;
 import com.mbientlab.metawear.app.help.HelpOptionAdapter;
 import com.mbientlab.metawear.module.ColorTcs34725;
-import com.mbientlab.metawear.module.ColorTcs34725.*;
+import com.mbientlab.metawear.module.ColorTcs34725.ColorAdc;
+import com.mbientlab.metawear.module.ColorTcs34725.Gain;
 import com.mbientlab.metawear.module.Timer;
 
 import java.io.FileOutputStream;

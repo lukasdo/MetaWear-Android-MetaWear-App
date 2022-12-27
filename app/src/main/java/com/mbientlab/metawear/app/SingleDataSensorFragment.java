@@ -42,7 +42,6 @@ import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.List;
 import java.util.Locale;
 
 /**

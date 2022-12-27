@@ -31,11 +31,10 @@
 
 package com.mbientlab.metawear.app;
 
+import static android.view.View.GONE;
+import static android.view.View.VISIBLE;
+
 import android.os.Bundle;
-//import android.support.design.widget.TextInputLayout;
-import com.google.android.material.textfield.TextInputLayout;
-//import android.support.v7.app.AlertDialog;
-import androidx.appcompat.app.AlertDialog;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -44,9 +43,11 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import androidx.appcompat.app.AlertDialog;
+
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
-
+import com.google.android.material.textfield.TextInputLayout;
 import com.mbientlab.metawear.UnsupportedModuleException;
 import com.mbientlab.metawear.app.help.HelpOption;
 import com.mbientlab.metawear.app.help.HelpOptionAdapter;
@@ -58,9 +59,6 @@ import com.mbientlab.metawear.module.Timer;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
-
-import static android.view.View.GONE;
-import static android.view.View.VISIBLE;
 
 /**
  * Created by etsai on 8/19/2015.

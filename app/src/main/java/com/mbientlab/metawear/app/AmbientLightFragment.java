@@ -45,7 +45,9 @@ import com.mbientlab.metawear.UnsupportedModuleException;
 import com.mbientlab.metawear.app.help.HelpOption;
 import com.mbientlab.metawear.app.help.HelpOptionAdapter;
 import com.mbientlab.metawear.module.AmbientLightLtr329;
-import com.mbientlab.metawear.module.AmbientLightLtr329.*;
+import com.mbientlab.metawear.module.AmbientLightLtr329.Gain;
+import com.mbientlab.metawear.module.AmbientLightLtr329.IntegrationTime;
+import com.mbientlab.metawear.module.AmbientLightLtr329.MeasurementRate;
 
 import java.util.Locale;
 
