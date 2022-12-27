@@ -105,8 +105,8 @@ public class AmbientLightFragment extends SingleDataSensorFragment {
                 }
 
                 final YAxis leftAxis = chart.getAxisLeft();
-                leftAxis.setAxisMaxValue(max);
-                leftAxis.setAxisMinValue(min);
+                leftAxis.setAxisMaximum(max);
+                leftAxis.setAxisMinimum(min);
                 refreshChart(false);
             }
 
@@ -137,24 +137,22 @@ public class AmbientLightFragment extends SingleDataSensorFragment {
                 .measurementRate(MeasurementRate.LTR329_RATE_50MS)
                 .integrationTime(IntegrationTime.LTR329_TIME_50MS)
                 .commit();
-        alsltr329.illuminance().addRouteAsync(source -> {
-            source.stream((data, env) -> {
-                final Float lux = data.value(Float.class);
+        alsltr329.illuminance().addRouteAsync(source -> source.stream((data, env) -> {
+            final Float lux = data.value(Float.class);
 
-                LineData chartData = chart.getData();
-                if (startTime == -1) {
-                    chartData.removeEntry(0,0);
-                    chartXValues.add("0");
-                    startTime = System.currentTimeMillis();
-                } else {
-                    chartXValues.add(String.format(Locale.US, "%.2f", sampleCount*samplingPeriod));
-                }
-                chartData.addEntry(new Entry(sampleCount, lux), 0);
+            LineData chartData = chart.getData();
+            if (startTime == -1) {
+                chartData.removeEntry(0,0);
+                chartXValues.add("0");
+                startTime = System.currentTimeMillis();
+            } else {
+                chartXValues.add(String.format(Locale.US, "%.2f", sampleCount*samplingPeriod));
+            }
+            chartData.addEntry(new Entry(sampleCount, lux), 0);
 
-                sampleCount++;
-                updateChart();
-            });
-        }).continueWith(task -> {
+            sampleCount++;
+            updateChart();
+        })).continueWith(task -> {
             streamRoute = task.getResult();
             alsltr329.illuminance().start();
             return null;

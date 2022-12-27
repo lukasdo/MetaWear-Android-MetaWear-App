@@ -76,7 +76,7 @@ public class HapticFragment extends ModuleFragmentBase {
                 boolean valid = true;
 
                 try {
-                    dutyCycle = Float.valueOf(dutyCycleText.getText().toString());
+                    dutyCycle = Float.parseFloat(dutyCycleText.getText().toString());
                     dutyCycleWrapper.setError(null);
                 } catch (Exception e) {
                     valid = false;
@@ -84,7 +84,7 @@ public class HapticFragment extends ModuleFragmentBase {
                 }
 
                 try {
-                    pulseWidth = Short.valueOf(pulseWidthText.getText().toString());
+                    pulseWidth = Short.parseShort(pulseWidthText.getText().toString());
                     pulseWidthWrapper.setError(null);
                 } catch (Exception e) {
                     valid = false;
@@ -105,7 +105,7 @@ public class HapticFragment extends ModuleFragmentBase {
             @Override
             public void onClick(View view) {
                 try {
-                    hapticModule.startBuzzer(Short.valueOf(pulseWidthText.getText().toString()));
+                    hapticModule.startBuzzer(Short.parseShort(pulseWidthText.getText().toString()));
                 } catch (Exception e) {
                     pulseWidthText.setError(e.getLocalizedMessage());
                 }

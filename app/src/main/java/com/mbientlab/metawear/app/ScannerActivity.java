@@ -78,10 +78,8 @@ public class ScannerActivity extends AppCompatActivity implements ScannerCommuni
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        switch(requestCode) {
-            case REQUEST_START_APP:
-                ((BleScannerFragment) getFragmentManager().findFragmentById(R.id.scanner_fragment)).startBleScan();
-                break;
+        if (requestCode == REQUEST_START_APP) {
+            ((BleScannerFragment) getFragmentManager().findFragmentById(R.id.scanner_fragment)).startBleScan();
         }
         super.onActivityResult(requestCode, resultCode, data);
     }

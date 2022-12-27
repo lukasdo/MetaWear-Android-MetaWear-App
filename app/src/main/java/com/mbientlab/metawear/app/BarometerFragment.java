@@ -60,7 +60,8 @@ public class BarometerFragment extends SensorFragment {
     private static final float BAROMETER_SAMPLE_FREQ = 26.32f, LIGHT_SAMPLE_PERIOD= 1 / BAROMETER_SAMPLE_FREQ;
 
     private BarometerBosch barometer;
-    private float altitudeMin, altitudeMax;
+    private final float altitudeMin;
+    private final float altitudeMax;
 
     private Route altitudeRoute = null;
     private final ArrayList<Entry> altitudeData= new ArrayList<>(), pressureData= new ArrayList<>();

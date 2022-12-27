@@ -124,7 +124,7 @@ public class SettingsFragment extends ModuleFragmentBase {
             deviceName = ((EditText) view.findViewById(R.id.settings_ad_name_value)).getText().toString();
 
             try {
-                adInterval = Integer.valueOf(((EditText) view.findViewById(R.id.settings_ad_interval_value)).getText().toString());
+                adInterval = Integer.parseInt(((EditText) view.findViewById(R.id.settings_ad_interval_value)).getText().toString());
                 inputLayouts[1].setError(null);
             } catch (Exception e) {
                 valid = false;
@@ -132,7 +132,7 @@ public class SettingsFragment extends ModuleFragmentBase {
             }
 
             try {
-                timeout = Short.valueOf(((EditText) view.findViewById(R.id.settings_ad_timeout_value)).getText().toString());
+                timeout = Short.parseShort(((EditText) view.findViewById(R.id.settings_ad_timeout_value)).getText().toString());
                 inputLayouts[2].setError(null);
             } catch (Exception e) {
                 valid = false;
@@ -140,7 +140,7 @@ public class SettingsFragment extends ModuleFragmentBase {
             }
 
             try {
-                txPower = Byte.valueOf(((EditText) view.findViewById(R.id.settings_tx_power_value)).getText().toString());
+                txPower = Byte.parseByte(((EditText) view.findViewById(R.id.settings_tx_power_value)).getText().toString());
                 inputLayouts[3].setError(null);
             } catch (Exception e) {
                 valid = false;

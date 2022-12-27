@@ -78,11 +78,11 @@ public class AccelerometerFragment extends ThreeAxisChartFragment {
 
                 final YAxis leftAxis = chart.getAxisLeft();
                 if (accelerometer instanceof AccelerometerBosch) {
-                    leftAxis.setAxisMaxValue(BOSCH_RANGES[rangeIndex]);
-                    leftAxis.setAxisMinValue(-BOSCH_RANGES[rangeIndex]);
+                    leftAxis.setAxisMaximum(BOSCH_RANGES[rangeIndex]);
+                    leftAxis.setAxisMinimum(-BOSCH_RANGES[rangeIndex]);
                 } else if (accelerometer instanceof AccelerometerMma8452q) {
-                    leftAxis.setAxisMaxValue(MMA845Q_RANGES[rangeIndex]);
-                    leftAxis.setAxisMinValue(-MMA845Q_RANGES[rangeIndex]);
+                    leftAxis.setAxisMaximum(MMA845Q_RANGES[rangeIndex]);
+                    leftAxis.setAxisMinimum(-MMA845Q_RANGES[rangeIndex]);
                 }
 
                 refreshChart(false);

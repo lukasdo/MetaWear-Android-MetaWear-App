@@ -144,7 +144,7 @@ public class TemperatureFragment extends SingleDataSensorFragment {
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 TextInputLayout extThermWrapper = (TextInputLayout) view.findViewById(R.id.ext_thermistor_data_pin_wrapper);
                 try {
-                    gpioDataPin = Byte.valueOf(s.toString());
+                    gpioDataPin = Byte.parseByte(s.toString());
                     view.findViewById(R.id.sample_control).setEnabled(true);
                     extThermWrapper.setError(null);
                 } catch (Exception e) {
@@ -170,7 +170,7 @@ public class TemperatureFragment extends SingleDataSensorFragment {
                 TextInputLayout extThermWrapper = (TextInputLayout) view.findViewById(R.id.ext_thermistor_pulldown_pin_wrapper);
 
                 try {
-                    gpioPulldownPin = Byte.valueOf(s.toString());
+                    gpioPulldownPin = Byte.parseByte(s.toString());
                     view.findViewById(R.id.sample_control).setEnabled(true);
                     extThermWrapper.setError(null);
                 } catch (Exception e) {

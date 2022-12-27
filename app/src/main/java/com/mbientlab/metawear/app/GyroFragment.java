@@ -47,8 +47,6 @@ import com.mbientlab.metawear.data.AngularVelocity;
 import com.mbientlab.metawear.module.Gyro;
 import com.mbientlab.metawear.module.Gyro.OutputDataRate;
 import com.mbientlab.metawear.module.Gyro.Range;
-//import com.mbientlab.metawear.module.GyroBmi160;
-//import com.mbientlab.metawear.module.GyroBmi270;
 
 /**
  * Created by etsai on 8/19/2015.
@@ -88,8 +86,8 @@ public class GyroFragment extends ThreeAxisChartFragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 rangeIndex = position;
-                leftAxis.setAxisMaxValue(AVAILABLE_RANGES[rangeIndex]);
-                leftAxis.setAxisMinValue(-AVAILABLE_RANGES[rangeIndex]);
+                leftAxis.setAxisMaximum(AVAILABLE_RANGES[rangeIndex]);
+                leftAxis.setAxisMinimum(-AVAILABLE_RANGES[rangeIndex]);
 
                 refreshChart(false);
             }

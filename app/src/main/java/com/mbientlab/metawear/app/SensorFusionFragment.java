@@ -89,11 +89,11 @@ public class SensorFusionFragment extends SensorFragment {
 
                 final YAxis leftAxis = chart.getAxisLeft();
                 if (position == 0) {
-                    leftAxis.setAxisMaxValue(1.f);
-                    leftAxis.setAxisMinValue(-1.f);
+                    leftAxis.setAxisMaximum(1.f);
+                    leftAxis.setAxisMinimum(-1.f);
                 } else  {
-                    leftAxis.setAxisMaxValue(360f);
-                    leftAxis.setAxisMinValue(-360f);
+                    leftAxis.setAxisMaximum(360f);
+                    leftAxis.setAxisMinimum(-360f);
                 }
 
                 refreshChart(false);

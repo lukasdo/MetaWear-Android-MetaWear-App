@@ -164,11 +164,11 @@ public class HomeFragment extends ModuleFragmentBase {
         }
 
         if (mwBoard.inMetaBootMode()) {
-            if (getFragmentManager().findFragmentByTag(METABOOT_WARNING_TAG) == null) {
-                new MetaBootWarningFragment().show(getFragmentManager(), METABOOT_WARNING_TAG);
+            if (getParentFragmentManager().findFragmentByTag(METABOOT_WARNING_TAG) == null) {
+                new MetaBootWarningFragment().show(getParentFragmentManager(), METABOOT_WARNING_TAG);
             }
         } else {
-            DialogFragment metabootWarning= (DialogFragment) getFragmentManager().findFragmentByTag(METABOOT_WARNING_TAG);
+            DialogFragment metabootWarning= (DialogFragment) getParentFragmentManager().findFragmentByTag(METABOOT_WARNING_TAG);
             if (metabootWarning != null) {
                 metabootWarning.dismiss();
             }

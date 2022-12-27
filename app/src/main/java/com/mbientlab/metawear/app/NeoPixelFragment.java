@@ -60,9 +60,9 @@ public class NeoPixelFragment extends ModuleFragmentBase {
     }
 
     private NeoPixel neoPixelModule;
-    private NeoPixel.Strand[] strand = new NeoPixel.Strand[3];
+    private final NeoPixel.Strand[] strand = new NeoPixel.Strand[3];
 
-    private PatternProgrammer[] programmer= new PatternProgrammer[] {
+    private final PatternProgrammer[] programmer= new PatternProgrammer[] {
             new PatternProgrammer() {
                 @Override
                 public void program() {
@@ -181,7 +181,7 @@ public class NeoPixelFragment extends ModuleFragmentBase {
             boolean valid = true;
 
             try {
-                npStrand = Byte.valueOf(npStrandText.getText().toString());
+                npStrand = Byte.parseByte(npStrandText.getText().toString());
                 npStrandWrapper.setError(null);
             } catch (Exception e) {
                 npStrandWrapper.setError(e.getLocalizedMessage());
@@ -190,7 +190,7 @@ public class NeoPixelFragment extends ModuleFragmentBase {
 
             TextInputLayout dataPinWrapper = (TextInputLayout) view.findViewById(R.id.neopixel_data_pin_wrapper);
             try {
-                dataPin = Byte.valueOf(dataPinText.getText().toString());
+                dataPin = Byte.parseByte(dataPinText.getText().toString());
                 dataPinWrapper.setError(null);
             } catch (Exception e) {
                 dataPinWrapper.setError(e.getLocalizedMessage());
@@ -199,7 +199,7 @@ public class NeoPixelFragment extends ModuleFragmentBase {
 
             TextInputLayout nLedWrapper = (TextInputLayout) view.findViewById(R.id.neopixel_nleds_wrapper);
             try {
-                nLeds = Byte.valueOf(nLedText.getText().toString());
+                nLeds = Byte.parseByte(nLedText.getText().toString());
                 nLedWrapper.setError(null);
             } catch (Exception e) {
                 nLedWrapper.setError(e.getLocalizedMessage());
@@ -214,7 +214,7 @@ public class NeoPixelFragment extends ModuleFragmentBase {
         freeBtn.setText(R.string.label_neopixel_free);
         freeBtn.setOnClickListener(v -> {
             try {
-                npStrand = Byte.valueOf(npStrandText.getText().toString());
+                npStrand = Byte.parseByte(npStrandText.getText().toString());
                 strand[npStrand].free();
                 npStrandWrapper.setError(null);
             } catch (Exception e) {
@@ -227,7 +227,7 @@ public class NeoPixelFragment extends ModuleFragmentBase {
         setBtn.setText(R.string.label_gpio_set_output);
         setBtn.setOnClickListener(v -> {
             try {
-                npStrand = Byte.valueOf(npStrandText.getText().toString());
+                npStrand = Byte.parseByte(npStrandText.getText().toString());
                 npStrandWrapper.setError(null);
 
                 strand[npStrand].hold();
@@ -243,7 +243,7 @@ public class NeoPixelFragment extends ModuleFragmentBase {
             boolean valid = true;
 
             try {
-                npStrand = Byte.valueOf(npStrandText.getText().toString());
+                npStrand = Byte.parseByte(npStrandText.getText().toString());
                 npStrandWrapper.setError(null);
             } catch (Exception e) {
                 npStrandWrapper.setError(e.getLocalizedMessage());
@@ -252,7 +252,7 @@ public class NeoPixelFragment extends ModuleFragmentBase {
 
             TextInputLayout nLedWrapper = (TextInputLayout) view.findViewById(R.id.neopixel_nleds_wrapper);
             try {
-                nLeds = Byte.valueOf(nLedText.getText().toString());
+                nLeds = Byte.parseByte(nLedText.getText().toString());
                 nLedWrapper.setError(null);
             } catch (Exception e) {
                 nLedWrapper.setError(e.getLocalizedMessage());
@@ -271,7 +271,7 @@ public class NeoPixelFragment extends ModuleFragmentBase {
             boolean valid = true;
 
             try {
-                npStrand = Byte.valueOf(npStrandText.getText().toString());
+                npStrand = Byte.parseByte(npStrandText.getText().toString());
                 npStrandWrapper.setError(null);
             } catch (Exception e) {
                 npStrandWrapper.setError(e.getLocalizedMessage());
@@ -280,7 +280,7 @@ public class NeoPixelFragment extends ModuleFragmentBase {
 
             TextInputLayout periodWrapper = (TextInputLayout) view.findViewById(R.id.neopixel_rot_period_wrapper);
             try {
-                period = Short.valueOf(rotPeriodText.getText().toString());
+                period = Short.parseShort(rotPeriodText.getText().toString());
                 periodWrapper.setError(null);
             } catch (Exception e) {
                 periodWrapper.setError(e.getLocalizedMessage());
@@ -295,7 +295,7 @@ public class NeoPixelFragment extends ModuleFragmentBase {
         stopBtn.setText(R.string.label_neopixel_stop);
         stopBtn.setOnClickListener(v -> {
             try {
-                npStrand = Byte.valueOf(npStrandText.getText().toString());
+                npStrand = Byte.parseByte(npStrandText.getText().toString());
                 npStrandWrapper.setError(null);
                 strand[npStrand].stopRotation();
             } catch (Exception e) {

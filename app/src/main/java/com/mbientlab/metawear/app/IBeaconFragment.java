@@ -132,7 +132,7 @@ public class IBeaconFragment extends ModuleFragmentBase {
             }
 
             try {
-                major = Short.valueOf(((EditText) view.findViewById(R.id.ibeacon_major_value)).getText().toString());
+                major = Short.parseShort(((EditText) view.findViewById(R.id.ibeacon_major_value)).getText().toString());
                 inputLayouts[1].setError(null);
             } catch (Exception e) {
                 valid = false;
@@ -140,7 +140,7 @@ public class IBeaconFragment extends ModuleFragmentBase {
             }
 
             try {
-                minor = Short.valueOf(((EditText) view.findViewById(R.id.ibeacon_minor_value)).getText().toString());
+                minor = Short.parseShort(((EditText) view.findViewById(R.id.ibeacon_minor_value)).getText().toString());
                 inputLayouts[2].setError(null);
             } catch (Exception e) {
                 valid = false;
@@ -148,7 +148,7 @@ public class IBeaconFragment extends ModuleFragmentBase {
             }
 
             try {
-                rxPower = Byte.valueOf(((EditText) view.findViewById(R.id.ibeacon_rx_power_value)).getText().toString());
+                rxPower = Byte.parseByte(((EditText) view.findViewById(R.id.ibeacon_rx_power_value)).getText().toString());
                 inputLayouts[3].setError(null);
             } catch (Exception e) {
                 valid = false;
@@ -156,7 +156,7 @@ public class IBeaconFragment extends ModuleFragmentBase {
             }
 
             try {
-                txPower = Byte.valueOf(((EditText) view.findViewById(R.id.ibeacon_tx_power_value)).getText().toString());
+                txPower = Byte.parseByte(((EditText) view.findViewById(R.id.ibeacon_tx_power_value)).getText().toString());
                 inputLayouts[4].setError(null);
             } catch (Exception e) {
                 valid = false;
@@ -164,7 +164,7 @@ public class IBeaconFragment extends ModuleFragmentBase {
             }
 
             try {
-                period = Short.valueOf(((EditText) view.findViewById(R.id.ibeacon_period_value)).getText().toString());
+                period = Short.parseShort(((EditText) view.findViewById(R.id.ibeacon_period_value)).getText().toString());
                 inputLayouts[5].setError(null);
             } catch (Exception e) {
                 valid = false;

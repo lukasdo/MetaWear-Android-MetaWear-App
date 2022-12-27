@@ -117,22 +117,22 @@ public class GpioFragment extends SingleDataSensorFragment {
                 switch (readMode) {
                     case READ_ADC:
                         max = 1023;
-                        leftAxis.setAxisMaxValue(max);
+                        leftAxis.setAxisMaximum(max);
                         csvHeaderDataName = "adc";
                         break;
                     case READ_ABS_REF:
                         max = 3.f;
-                        leftAxis.setAxisMaxValue(max);
+                        leftAxis.setAxisMaximum(max);
                         csvHeaderDataName = "abs reference";
                         break;
                     case READ_DIGITAL:
                         max = 1;
-                        leftAxis.setAxisMaxValue(max);
+                        leftAxis.setAxisMaximum(max);
                         csvHeaderDataName = "digital";
                         break;
                 }
 
-                leftAxis.setAxisMaxValue(max);
+                leftAxis.setAxisMaximum(max);
                 refreshChart(false);
             }
 
@@ -158,7 +158,7 @@ public class GpioFragment extends SingleDataSensorFragment {
                 final TextInputLayout gpioTextWrapper = (TextInputLayout) view.findViewById(R.id.gpio_pin_wrapper);
 
                 try {
-                    gpioPin = Byte.valueOf(s.toString());
+                    gpioPin = Byte.parseByte(s.toString());
                     gpioTextWrapper.setError(null);
                     for (int id : CONTROL_RES_IDS) {
                         view.findViewById(id).setEnabled(true);
